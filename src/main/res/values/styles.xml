@@ -1,0 +1,27 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"><!--android:Theme-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="Dialog" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:background">#ff303030</item>
+        <!--     <style name="Dialog" parent="Theme.AppCompat.Dialog"> -->
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="DarkTheme" parent="android:Theme">
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:background">#ff303030</item>-->
+        <!--<item name="android:textColor">#ffffffff</item>-->
+        <!--<item name="windowBackground">#ff000000</item> -->-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--     <style name="Dialog" parent="Theme.AppCompat.Dialog"> -->
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+</resources>
