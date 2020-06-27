@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="@string/unsignedLab"
             android:layout_weight="3"
-            android:gravity="end" />
+            android:gravity="end"/>
 
         <TextView
             android:layout_width="0dp"
@@ -85,44 +85,48 @@
             android:text="@string/byteLab" />
 
         <EditText
-            android:id="@+id/uByteMS"
+            android:id="@+id/uByteM"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/uByteHint"
             android:maxLength="3"
             android:singleLine="true"
-            android:inputType="number" />
+            android:inputType="number"
+            android:importantForAutofill="no"/>
 
         <EditText
-            android:id="@+id/uByteUS"
+            android:id="@+id/uByteU"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/uByteHint"
             android:maxLength="3"
             android:singleLine="true"
-            android:inputType="number" />
+            android:inputType="number"
+            android:importantForAutofill="no"/>
 
         <EditText
-            android:id="@+id/uByteHS"
+            android:id="@+id/uByteH"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/uByteHint"
             android:maxLength="3"
             android:singleLine="true"
-            android:inputType="number" />
+            android:inputType="number"
+            android:importantForAutofill="no"/>
 
         <EditText
-            android:id="@+id/uByteLS"
+            android:id="@+id/uByteL"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/uByteHint"
             android:maxLength="3"
             android:singleLine="true"
-            android:inputType="number" />
+            android:inputType="number"
+            android:importantForAutofill="no"/>
 
     </LinearLayout>
 
@@ -140,7 +144,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" >
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -148,40 +152,52 @@
                     android:text="@string/asciiLab" />
 
                 <EditText
-                    android:id="@+id/charMS"
+                    android:id="@+id/charM"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/charHint"
                     android:maxLength="1"
-                    android:inputType="textNoSuggestions|text" />
+                    android:inputType="textNoSuggestions|text"
+                    android:importantForAutofill="no"/>
 
                 <EditText
-                    android:id="@+id/charUS"
+                    android:id="@+id/charU"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/charHint"
                     android:maxLength="1"
-                    android:inputType="textNoSuggestions|text" />
+                    android:inputType="textNoSuggestions|text"
+                    android:importantForAutofill="no"/>
 
                 <EditText
-                    android:id="@+id/charHS"
+                    android:id="@+id/charH"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/charHint"
                     android:maxLength="1"
-                    android:inputType="textNoSuggestions|text" />
+                    android:inputType="textNoSuggestions|text"
+                    android:importantForAutofill="no"/>
 
                 <EditText
-                    android:id="@+id/charLS"
+                    android:id="@+id/charL"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/charHint"
                     android:maxLength="1"
-                    android:inputType="textNoSuggestions|text" />
+                    android:inputType="textNoSuggestions|text"
+                    android:importantForAutofill="no"/>
+
+                <Button
+                    android:id="@+id/eraseChars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eraseChars"
+                    android:onClick="eraseChar"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -193,18 +209,69 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/binaryLab" />
+                    android:text="@string/binaryLabH" />
 
                 <EditText
-                    android:id="@+id/uBinary"
+                    android:id="@+id/uBinM"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/binaryHint"
                     android:digits="01"
-                    android:maxLength="32"
+                    android:maxLength="9"
                     android:singleLine="true"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:importantForAutofill="no"/>
+
+                <EditText
+                    android:id="@+id/uBinU"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/binaryHint"
+                    android:digits="01"
+                    android:maxLength="9"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:importantForAutofill="no"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/binaryLab"/>
+
+                <EditText
+                    android:id="@+id/uBinH"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/binaryHint"
+                    android:digits="01"
+                    android:maxLength="9"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:importantForAutofill="no"/>
+
+                <EditText
+                    android:id="@+id/uBinL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/binaryHint"
+                    android:digits="01"
+                    android:maxLength="9"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:importantForAutofill="no"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -219,27 +286,28 @@
                     android:text="@string/hexadecimalLab" />
 
                 <EditText
-                    android:id="@+id/uHexadecimal"
+                    android:id="@+id/uHex"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/hexadecimalHint"
                     android:digits="0123456789ABCDEFabcdef"
-                    android:maxLength="8"
+                    android:maxLength="9"
                     android:singleLine="true"
-                    android:inputType="textNoSuggestions|textCapCharacters" />
+                    android:inputType="textNoSuggestions|textCapCharacters"
+                    android:importantForAutofill="no"/>
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" >
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/int16Lab" />
+                    android:text="@string/int16Lab"/>
 
                 <EditText
                     android:id="@+id/uInt16H"
@@ -249,7 +317,8 @@
                     android:hint="@string/uIntHint"
                     android:maxLength="9"
                     android:singleLine="true"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:importantForAutofill="no"/>
 
                 <EditText
                     android:id="@+id/uInt16"
@@ -259,7 +328,8 @@
                     android:hint="@string/uIntHint"
                     android:maxLength="9"
                     android:singleLine="true"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:importantForAutofill="no"/>
 
             </LinearLayout>
 
@@ -272,7 +342,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/int32Lab" />
+                    android:text="@string/int32Lab"/>
 
                 <EditText
                     android:id="@+id/uInt32"
@@ -280,7 +350,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/uIntHint"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:importantForAutofill="no"/>
 
             </LinearLayout>
 
@@ -294,14 +365,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/signedLab"
                     android:layout_weight="3"
-                    android:gravity="end" />
+                    android:gravity="end"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/sCheckSum"
                     android:layout_weight="2"
-                    android:gravity="end" />
+                    android:gravity="end"/>
             </LinearLayout>
 
             <LinearLayout
@@ -351,56 +422,60 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" >
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/byteLab" />
+                    android:text="@string/byteLab"/>
 
                 <EditText
-                    android:id="@+id/sByteMS"
+                    android:id="@+id/sByteM"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/sByteHint"
-                    android:inputType="number|numberSigned" />
+                    android:inputType="number|numberSigned"
+                    android:importantForAutofill="no"/>
 
                 <EditText
-                    android:id="@+id/sByteUS"
+                    android:id="@+id/sByteU"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/sByteHint"
-                    android:inputType="number|numberSigned" />
+                    android:inputType="number|numberSigned"
+                    android:importantForAutofill="no"/>
 
                 <EditText
-                    android:id="@+id/sByteHS"
+                    android:id="@+id/sByteH"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/sByteHint"
-                    android:inputType="number|numberSigned" />
+                    android:inputType="number|numberSigned"
+                    android:importantForAutofill="no"/>
 
                 <EditText
-                    android:id="@+id/sByteLS"
+                    android:id="@+id/sByteL"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/sByteHint"
-                    android:inputType="number|numberSigned" />
+                    android:inputType="number|numberSigned"
+                    android:importantForAutofill="no"/>
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" >
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/int16Lab" />
+                    android:text="@string/int16Lab"/>
 
                 <EditText
                     android:id="@+id/sInt16H"
@@ -410,7 +485,8 @@
                     android:hint="@string/sIntHint"
                     android:maxLength="9"
                     android:singleLine="true"
-                    android:inputType="number|numberSigned" />
+                    android:inputType="number|numberSigned"
+                    android:importantForAutofill="no"/>
 
                 <EditText
                     android:id="@+id/sInt16"
@@ -420,7 +496,8 @@
                     android:hint="@string/sIntHint"
                     android:maxLength="9"
                     android:singleLine="true"
-                    android:inputType="number|numberSigned" />
+                    android:inputType="number|numberSigned"
+                    android:importantForAutofill="no"/>
 
             </LinearLayout>
 
@@ -433,7 +510,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/int32Lab" />
+                    android:text="@string/int32Lab"/>
 
                 <EditText
                     android:id="@+id/sInt32"
@@ -441,7 +518,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/sIntHint"
-                    android:inputType="number|numberSigned" />
+                    android:inputType="number|numberSigned"
+                    android:importantForAutofill="no"/>
             </LinearLayout>
 
             <LinearLayout
@@ -453,7 +531,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/floatLab" />
+                    android:text="@string/floatLab"/>
 
                 <EditText
                     android:id="@+id/sFloat"
@@ -461,11 +539,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="@string/floatHint"
-                    android:inputType="number|numberSigned|numberDecimal" />
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:importantForAutofill="no"/>
 
             </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
 </LinearLayout>

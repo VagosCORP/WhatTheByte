@@ -6,10 +6,12 @@
 
     <string name="unsignedLab">Unsigned Display</string>
     <string name="signedLab">Signed Display</string>
-    <string name="byteLab">Bytes</string>
+    <string name="byteLab">Byte</string>
     <string name="asciiLab">ASCII</string>
-    <string name="binaryLab">Binary 0b</string>
-    <string name="hexadecimalLab" translatable="false">Hexadecimal 0x</string>
+    <string name="eraseChars">Erase Chars</string>
+    <string name="binaryLabH">BinMS</string>
+    <string name="binaryLab">BinLS</string>
+    <string name="hexadecimalLab" translatable="false">Hex</string>
     <string name="int16Lab" translatable="false">Int16</string>
     <string name="int32Lab" translatable="false">Int32</string>
     <string name="floatLab" translatable="false">Float</string>
@@ -18,7 +20,7 @@
     <string name="charHint" translatable="false">A</string>
     <string name="uByteHint" translatable="false">123</string>
     <string name="sByteHint" translatable="false">-123</string>
-    <string name="binaryHint" translatable="false">010011000111</string>
+    <string name="binaryHint" translatable="false">11001101</string>
     <string name="hexadecimalHint" translatable="false">0123456789ABCDEF</string>
     <string name="uIntHint" translatable="false">0123456789</string>
     <string name="sIntHint" translatable="false">-0123456789</string>
