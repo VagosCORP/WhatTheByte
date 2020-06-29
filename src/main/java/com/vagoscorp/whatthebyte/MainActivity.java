@@ -11,6 +11,7 @@ import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -90,6 +91,7 @@ public class MainActivity extends Activity {
     EditText[] editTexts = new EditText[24];
     TextView checkSum;
     TextView sCheckSum;
+    Button eraseChars;
     int dataType = 13;
     Context context;
 
@@ -100,6 +102,7 @@ public class MainActivity extends Activity {
         mainActivity = findViewById(R.id.MainActivity);
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
             mainActivity.setBackgroundColor(Color.parseColor("#ff303030"));
+        context = this;
         for(int i = 0; i < 24; i++) {
             editTexts[i] = findViewById(editTextRes[i]);
             final int i2 = i;
@@ -114,7 +117,22 @@ public class MainActivity extends Activity {
         }
         checkSum = findViewById(R.id.checkSum);
         sCheckSum = findViewById(R.id.sCheckSum);
-        context = this;
+        eraseChars = findViewById(R.id.eraseChars);
+        eraseChars.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for(int i = 4; i < 8; i++)
+                    editTexts[i].setText("");
+            }
+        });
+        eraseChars.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                for(int i = 0; i < 24; i++)
+                    editTexts[i].setText("");
+                return true;
+            }
+        });
         final TextWatcher textWatcher = new TextWatcher() {
 
             @Override
@@ -180,11 +198,6 @@ public class MainActivity extends Activity {
         }
         dataType = 11;
         transmutation(thatBytes);
-    }
-
-    public void eraseChar(View view) {
-        for(int i = 4; i < 8; i++)
-            editTexts[i].setText("");
     }
 
     void restoreThatBytes() {
@@ -471,7 +484,7 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 

@@ -12,9 +12,9 @@ android {
     compileSdkVersion 30
     defaultConfig {
         applicationId "com.vagoscorp.whatthebyte"
-        minSdkVersion 4
+        minSdkVersion 3
         targetSdkVersion 30
-        versionCode 20200625
+        versionCode 20200628
         versionName '1.0.5'
         signingConfig signingConfigs.Sebasu
     }
