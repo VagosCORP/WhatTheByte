@@ -5,15 +5,15 @@ android {
         Sebasu {
             keyAlias 'sebasuk'
             keyPassword 'Sehnlich69K'
-            storeFile file('L:\\5_WorkSpaces\\AndroidStudioProjects\\AndroidKeyStore.jks')
+            storeFile file('/home/sebas/WorkSpaces/AndroidStudioProjects/AndroidKeyStore.jks')
             storePassword 'Kagutsuchi2.4'
         }
     }
-    compileSdkVersion 31
+    compileSdk 33
     defaultConfig {
         applicationId "com.vagoscorp.whatthebyte"
         minSdkVersion 3
-        targetSdkVersion 31
+        targetSdk 33
         versionCode 20200628
         versionName '1.0.5'
         signingConfig signingConfigs.Sebasu
