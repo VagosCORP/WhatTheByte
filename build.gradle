@@ -12,15 +12,15 @@ android {
     defaultConfig {
         applicationId "com.vagoscorp.whatthebyte"
         minSdkVersion 3
-        targetSdk 33
-        versionCode 20230408
+        targetSdk 37
+        versionCode 20260916
         versionName '1.0.5'
         signingConfig signingConfigs.Sebasu
     }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.Sebasu
         }
         debug {
@@ -29,8 +29,9 @@ android {
     }
     productFlavors {
     }
-    compileSdk 33
+    compileSdk 37
     namespace 'com.vagoscorp.whatthebyte'
+    compileSdkMinor 2
 }
 
 dependencies {
